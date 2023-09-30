@@ -1,0 +1,12 @@
+/* Name: Sébastien Violette Student Number: 8926847 Email: sviolette6847@conestogac.on.ca */
+body{
+    font: normal normal normal 12px/1.5 Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(275, 73%, 64%, 0.236);
+}
+h2{
+    color: #00f;
+    font-size: 1.5em;
+
+}
