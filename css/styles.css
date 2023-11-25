@@ -1,16 +1,21 @@
 /* Name: Sébastien Violette Student Number: 8926847 Email: sviolette6847@conestogac.on.ca */
+html{
+    font: normal normal normal 20px/1.5 Arial, Helvetica, sans-serif;
+}
 body{
-    font: normal normal normal 12px/1.5 Arial, Helvetica, sans-serif;
     width: 100vw;
     height: 100vh;
     background-color: rgb(255, 211, 164);
+    display: flex;
+    flex-direction: column;
 }
 header{
     background-color: hsl(181, 80%, 80%);
+    flex: 1 10%;
 }
 h1{
     color: darkgreen;
-    font-size:30px;
+    font-size:2.5rem;
 }
 h2{
     color: #05F;
@@ -23,24 +28,30 @@ nav ul li{
 }
 nav ul li a{
     color: indigo;
-    border: 2px solid indigo;
+    border: 0.5em solid indigo;
     background-color: cornsilk;
     text-decoration: none;
-    padding: 5px;
+    padding: 1em;
 }
 nav ul li a:hover{
     color: cornsilk;
     background-color: indigo;
     border-color: cornsilk;
 }
+section{
+    display: flex;
+    flex-direction: row;
+    flex: 4 8%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
 main{
-    float:left;
-    width: 65vw;
     background-color: hsl(120, 80%, 80%);
+    flex: 2 1 70%;
 }
 aside{
-    float:right;
-    width: 29vw;
+    flex: 1 1 30%;
     background-color: hsl(57, 100%, 55%);
 }
 aside li{
@@ -55,14 +66,13 @@ aside a:hover{
     color: #05F;
 }
 footer{
-    clear: both;
     color: #05F;
     background-color: hsl(255, 80%, 80%);
 }
 .structural{
-    margin:10px;
-    padding: 10px;
-    border: 2px solid red;
+    margin:1rem;
+    padding: 1em;
+    border: 0.5em solid red;
 }
 #para1{
     color:rgb(255, 100, 030);
@@ -71,8 +81,8 @@ footer{
     color:rgb(94, 63, 15);
 }
 form{
-    border: 5px dashed darkcyan;
-    padding: 5px;
+    border: 0.5em dashed darkcyan;
+    padding: 1em;
 }
 input[type=text], input[type=email], input[type=submit], select, option{
     display: block;
@@ -97,4 +107,30 @@ fieldset{
 }
 footer p{
     font-size: .75em;
+}
+img{
+    width: 80%;
+    height: 80%;
+}
+figure{
+    border: 0.1em solid black;
+}
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+@media (max-width: 600px){
+    html{
+        font-size: 10px;
+    }
+    #gallery{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    section{
+        display: block;
+    }
 }
